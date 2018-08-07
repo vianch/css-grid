@@ -1,0 +1,15 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "css handbook",
+  "main": "index.js",
+  "repository": "https://github.com/vianch/css-grid.git",
+  "author": "Victor Chavarro <victor.chavarro@zagalabs.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "smooth-server -c config/server.config.json"
+  },
+  "devDependencies": {
+    "smooth-server": "^1.1.0"
+  }
+}

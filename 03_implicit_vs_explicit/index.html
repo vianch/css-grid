@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid fundamentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #84B5C2;
+      color: #385455;
+    }
+    .item {
+      border: 1px dotted;
+      background: #C4DEDF;
+      text-align: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 200px 400px;
+      grid-template-rows: 200px 200px;
+      grid-auto-rows: 100px;
+      grid-auto-columns: 200px;
+      grid-gap: 20px
+    }
+
+  </style>
+</head>
+<body>
+  <h3>Explicit vs implicit</h3>
+  <p>All extra items are implict generated</p>
+  <p>In firefox dev tools Transparent dotted  lines means implicit,  solid dotted and solid lines means explicit</p>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+
+
+</body>
+</html>
