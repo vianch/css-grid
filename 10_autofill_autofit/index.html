@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid fundamentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #84B5C2;
+      color: #385455;
+    }
+
+    .item {
+      border: 1px dotted;
+      background: #C4DEDF;
+      text-align: center;
+    }
+
+    .container {
+      border: 10px solid #385455;
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fit, 150px)
+    }
+
+    .container2 {
+      margin-top: 30px;
+      border: 10px solid #385455;
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fill, 150px)
+    }
+
+    .item4 {
+      grid-column-end: -1;
+    }
+  </style>
+</head>
+<body>
+  <h3>Autofill autofit</h3>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item item4">4</div>
+  </div>
+
+  <div class="container2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item item4">4</div>
+    </div>
+</body>
+</html>
