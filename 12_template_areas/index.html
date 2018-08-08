@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid fundamentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #84B5C2;
+      color: #385455;
+    }
+
+    .item {
+      border: 1px dotted;
+      background: #C4DEDF;
+      text-align: center;
+    }
+
+    .container {
+      border: 10px solid #385455;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns:  1fr 1fr 1fr;
+      grid-template-rows:  150px 150px 100px;
+      grid-template-areas:
+        "sidebar-left content sidebar-right"
+        "sidebar-left content sidebar-right"
+        "footer footer footer"
+    }
+
+    .sidebar-left {
+      grid-area: sidebar-left
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    .sidebar-right {
+      grid-area: sidebar-right
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        grid-template-areas:
+        "content content content"
+        "sidebar-left sidebar-left sidebar-right"
+        "footer footer footer"
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h3>Template areas</h3>
+
+  <div class="container">
+    <div class="item sidebar-left">
+        <p>I'm a sidebar #1</p>
+    </div>
+
+    <div class="item content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="item sidebar-right">
+      <p>I'm a sidebar #2</p>
+    </div>
+
+    <div class="item footer">
+      <p>I'm the footer</p>
+    </div>
+  </div>
+</body>
+</html>
