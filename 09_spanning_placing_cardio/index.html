@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Grid fundamentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #84B5C2;
+      color: #385455;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+    .item {
+      border: 1px dotted;
+      background: #C4DEDF;
+      text-align: center;
+    }
+
+    .container {
+      border: 10px solid #385455;
+      margin-top: 30px;
+      display: grid;
+      grid-gap: 20px;
+      /*1. Make the grid 10 columns wide, every other taking up twice the free space*/
+      grid-template-columns: repeat(5, 1fr 2fr);
+      /*2. Make the grid have 10 explicit rows, 50px high each*/
+      grid-template-rows: repeat(10, 50px);
+    }
+
+    /*3. Whit item 1, start at col 3 and go until 5*/
+    .item1 {
+      grid-column: 3 / 5;
+    }
+
+    /*4. Whit item 2, start at col 5 and go until the end*/
+    .item2 {
+      grid-column: 5 / -1
+    }
+
+    /*5. Make item 5 double span 2 cols and rows*/
+    .item5 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    /*6. Make item 8 two rows hig*/
+    .item8 {
+      grid-row: span 2;
+    }
+
+    /*7. Make item 15 span the stire grid with*/
+    .item15 {
+      grid-column: 1 / -1
+    }
+
+    /*8. Make item 18 span 4 widths but end 9*/
+    .item18 {
+      grid-column: span 4 / 9
+    }
+
+    /*9. Make item 20 start at row 4 and go for 3*/
+    .item20 {
+      grid-row: 4 / span 3
+    }
+  </style>
+</head>
+<body>
+  <h3>Spanning and placing cardio</h3>
+
+  <ol>
+      <li> Make the grid 10 columns wide, every other taking up twice the free space</li>
+      <li> Make the grid have 10 explicit rows, 50px high each</li>
+      <li> Whit item 1, start at col 3 and go until 5</li>
+      <li> Whit item 2, start at col 5 and go until the end</li>
+      <li> Make item 5 double span 2 cols and rows</li>
+      <li> Make item 8 two rows high</li>
+      <li> Make item 15 span the stire grid with</li>
+      <li> Make item 18 span 4 widths but end 9</li>
+      <li> Make item 20 start at row 4 and go for 3</li>
+  </ol>
+
+
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item item5">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item item8">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item item15">15</div>
+    <div class="item">16</div>
+    <div class="item">17</div>
+    <div class="item item18">18</div>
+    <div class="item">19</div>
+    <div class="item item20">20</div>
+    <div class="item">21</div>
+    <div class="item">22</div>
+    <div class="item">23</div>
+    <div class="item">24</div>
+    <div class="item">25</div>
+    <div class="item">26</div>
+    <div class="item">27</div>
+    <div class="item">28</div>
+    <div class="item">29</div>
+    <div class="item">30</div>
+  </div>
+
+</body>
+</html>
